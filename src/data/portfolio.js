@@ -15,7 +15,7 @@ export const portfolio = {
   ],
   skills: {
     'Core stack': ['PHP', 'JavaScript', 'HTML5', 'CSS3', 'SQL'],
-    WordPress: ['ACF', 'WooCommerce', 'Gravity Forms', 'Elementor', 'Gutenberg', 'Divi', 'WPBakery', 'Oxygen Builder'],
+    WordPress: ['ACF', 'Gravity Forms', 'Elementor', 'Gutenberg', 'Divi', 'WPBakery', 'Oxygen Builder'],
     'Front-end': ['React', 'Tailwind', 'Bootstrap', 'jQuery'],
     'Performance & ops': ['Core Web Vitals', 'Cloudflare', 'WP Engine', 'DNS / SSL', 'Deployment'],
     'AI & prompt engineering': ['ChatGPT', 'Claude', 'Gemini', 'Cursor', 'GitHub Copilot', 'Prompt Engineering'],
