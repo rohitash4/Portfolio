@@ -1,12 +1,12 @@
 export const portfolio = {
   name: 'Rohit Varma',
-  role: 'Senior Web Developer',
+  role: 'Creative Developer',
   location: 'Mumbai, India',
   email: 'rohit123209@gmail.com',
   phone: '+91 9820300377',
   linkedin: 'https://linkedin.com/in/rohit-varma-designer',
   summary:
-    'I build high-performance WordPress and front-end experiences that are resilient, accessible, and made to move businesses forward.',
+    'I design and build expressive digital experiences across WordPress, interactive front-end, and AI-powered creative tools.',
   highlights: [
     ['130+', 'production websites managed'],
     ['25+', 'custom sites delivered'],
