@@ -15,10 +15,31 @@ export const portfolio = {
   ],
   skills: {
     'Core stack': ['PHP', 'JavaScript', 'HTML5', 'CSS3', 'SQL'],
-    WordPress: ['ACF', 'Gravity Forms', 'Elementor', 'Gutenberg', 'Divi', 'WPBakery', 'Oxygen Builder'],
+    WordPress: [
+      'ACF',
+      'Gravity Forms',
+      'Elementor',
+      'Gutenberg',
+      'Divi',
+      'WPBakery',
+      'Oxygen Builder',
+    ],
     'Front-end': ['React', 'Tailwind', 'Bootstrap', 'jQuery'],
-    'Performance & ops': ['Core Web Vitals', 'Cloudflare', 'WP Engine', 'DNS / SSL', 'Deployment'],
-    'AI & prompt engineering': ['ChatGPT', 'Claude', 'Gemini', 'Cursor', 'GitHub Copilot', 'Prompt Engineering'],
+    'Performance & ops': [
+      'Core Web Vitals',
+      'Cloudflare',
+      'WP Engine',
+      'DNS / SSL',
+      'Deployment',
+    ],
+    'AI & prompt engineering': [
+      'ChatGPT',
+      'Claude',
+      'Gemini',
+      'Cursor',
+      'GitHub Copilot',
+      'Prompt Engineering',
+    ],
     'Design & prototyping': ['Figma', 'Adobe XD', 'Responsive UI'],
   },
   experience: [
@@ -50,15 +71,18 @@ export const portfolio = {
     {
       number: '01',
       title: 'ACF Content Platform',
-      description: 'Scalable, custom-coded WordPress systems using ACF and custom post types for complex data and high-traffic environments.',
+      description:
+        'Scalable, custom-coded WordPress systems using ACF and custom post types for complex data and high-traffic environments.',
       tags: ['WordPress', 'PHP', 'ACF'],
       metric: 'Custom filters + structured content',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+      image:
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
     },
     {
       number: '02',
       title: 'Performance Engineering',
-      description: 'Deep-dive performance audits across a 130+ site portfolio, from caching and CDN routing to database query optimization.',
+      description:
+        'Deep-dive performance audits across a 130+ site portfolio, from caching and CDN routing to database query optimization.',
       tags: ['Core Web Vitals', 'Cloudflare', 'Lighthouse'],
       metric: '95+ mobile PageSpeed score',
       image: null,
@@ -66,10 +90,12 @@ export const portfolio = {
     {
       number: '03',
       title: 'AI Creative Studio',
-      description: 'A local-first AI product intelligence and creative generation platform built for Savit Interactive.',
+      description:
+        'A local-first AI product intelligence and creative generation platform built for Savit Interactive.',
       tags: ['React', 'FastAPI', 'Gemini', 'Prompt engineering'],
       metric: 'Product image → marketing creative',
-      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
+      image:
+        'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
       slug: 'ai-product-creative-studio',
     },
   ],

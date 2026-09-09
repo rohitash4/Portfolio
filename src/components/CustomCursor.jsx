@@ -7,7 +7,8 @@ export default function CustomCursor() {
   useEffect(() => {
     const dot = dotRef.current;
     const ring = ringRef.current;
-    if (!dot || !ring || window.matchMedia('(pointer: coarse)').matches) return undefined;
+    if (!dot || !ring || window.matchMedia('(pointer: coarse)').matches)
+      return undefined;
 
     let pointerX = -100;
     let pointerY = -100;
@@ -21,7 +22,8 @@ export default function CustomCursor() {
       dot.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
     };
     const enterInteractive = () => document.body.classList.add('cursor-hover');
-    const leaveInteractive = () => document.body.classList.remove('cursor-hover');
+    const leaveInteractive = () =>
+      document.body.classList.remove('cursor-hover');
     const animate = () => {
       ringX += (pointerX - ringX) * 0.16;
       ringY += (pointerY - ringY) * 0.16;
