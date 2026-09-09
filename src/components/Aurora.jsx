@@ -45,13 +45,15 @@ export default function Aurora({
   speed = 1,
 }) {
   const container = useRef(null);
-  const props = useRef({ colorStops, amplitude, blend, speed });
-  props.current = { colorStops, amplitude, blend, speed };
 
   useEffect(() => {
     const element = container.current;
     if (!element) return undefined;
-    const renderer = new Renderer({ alpha: true, premultipliedAlpha: true, antialias: true });
+    const renderer = new Renderer({
+      alpha: true,
+      premultipliedAlpha: true,
+      antialias: true,
+    });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
     gl.enable(gl.BLEND);
@@ -66,22 +68,32 @@ export default function Aurora({
         uAmplitude: { value: amplitude },
         uBlend: { value: blend },
         uResolution: { value: [1, 1] },
-        uColorStops: { value: colorStops.map((hex) => { const color = new Color(hex); return [color.r, color.g, color.b]; }) },
+        uColorStops: {
+          value: colorStops.map((hex) => {
+            const color = new Color(hex);
+            return [color.r, color.g, color.b];
+          }),
+        },
       },
     });
     const mesh = new Mesh(gl, { geometry, program });
     element.appendChild(gl.canvas);
     const resize = () => {
       renderer.setSize(element.offsetWidth, element.offsetHeight);
-      program.uniforms.uResolution.value = [element.offsetWidth, element.offsetHeight];
+      program.uniforms.uResolution.value = [
+        element.offsetWidth,
+        element.offsetHeight,
+      ];
     };
     let animationFrame;
     const update = (time) => {
-      const current = props.current;
-      program.uniforms.uTime.value = time * 0.0001 * current.speed;
-      program.uniforms.uAmplitude.value = current.amplitude;
-      program.uniforms.uBlend.value = current.blend;
-      program.uniforms.uColorStops.value = current.colorStops.map((hex) => { const color = new Color(hex); return [color.r, color.g, color.b]; });
+      program.uniforms.uTime.value = time * 0.0001 * speed;
+      program.uniforms.uAmplitude.value = amplitude;
+      program.uniforms.uBlend.value = blend;
+      program.uniforms.uColorStops.value = colorStops.map((hex) => {
+        const color = new Color(hex);
+        return [color.r, color.g, color.b];
+      });
       renderer.render({ scene: mesh });
       animationFrame = requestAnimationFrame(update);
     };
@@ -96,5 +108,7 @@ export default function Aurora({
     };
   }, [amplitude, blend, colorStops, speed]);
 
-  return <div ref={container} className="aurora-container" aria-hidden="true" />;
+  return (
+    <div ref={container} className="aurora-container" aria-hidden="true" />
+  );
 }
